@@ -23,17 +23,13 @@ int main(int argc, char *argv[])
 
 	/*
 	 * command line arguments
-	 * -e edit only
 	 * -g compile with gcc (instead of cc)
 	 *  default: Error out
 	 */
-	while((arg = getopt(argc, argv, "eg")) != -1)
+	while((arg = getopt(argc, argv, "g")) != -1)
 	{
 		switch(arg)
 		{
-			case 'e' :
-				system(edit);
-				return 0;
 			case 'g' :
 				system(edit);
 				system(gcc);
