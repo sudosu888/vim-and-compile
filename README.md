@@ -15,7 +15,7 @@ its short sweet and simple.
 # Useage
 vc "file.c"
 
--e will edit, but won't compile
--g will compile with gcc
+-e will edit, but won't compile.
+-g will compile with gcc.
 
 if no arguments are passed the program will default to cc

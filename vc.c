@@ -1,3 +1,4 @@
+/* See LICENSE file for license and copyright details */
 #include<stdio.h>
 #include<stdlib.h>
 #include<unistd.h>
