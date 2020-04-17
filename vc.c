@@ -26,13 +26,21 @@ int main(int argc, char *argv[])
 	 * -g compile with gcc (instead of cc)
 	 *  default: Error out
 	 */
-	while((arg = getopt(argc, argv, "g")) != -1)
+	while((arg = getopt(argc, argv, "gmi")) != -1)
 	{
 		switch(arg)
 		{
 			case 'g' :
 				system(edit);
 				system(gcc);
+				return 0;
+			case 'm' :
+				system(edit);
+				system("make");
+				return 0;
+			case 'i' :
+				system(edit);
+				system("make install");
 				return 0;
 			default :
 				printf("Invalid arguments\n");
