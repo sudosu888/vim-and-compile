@@ -17,4 +17,10 @@ vc "file.c"
 
 -g will compile with gcc.
 
-if no arguments are passed the program will default to cc
+-m will compile with a makefile (must be in working directory)
+
+-i will compile with make install (also must be in working directory)
+
+you can use vc 'filname' -mi to make and make install
+
+if no arguments are passed the program will default to cc.
