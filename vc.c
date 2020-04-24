@@ -24,6 +24,10 @@ int main(int argc, char *argv[])
 	/*
 	 * command line arguments
 	 * -g compile with gcc (instead of cc)
+	 * -m compile with make
+	 * -i make install (obviously)
+	 *  you can also use -mi to make and
+	 *  install but you'll need root access.
 	 *  default: Error out
 	 */
 	while((arg = getopt(argc, argv, "gmi")) != -1)
