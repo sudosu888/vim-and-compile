@@ -3,13 +3,14 @@
 #include<stdlib.h>
 #include<unistd.h>
 
+
 int main(int argc, char *argv[])
 {
 	/*
 	 * Needed variables and integers
 	 */
 	int arg;
-	char *file = argv[1];
+	char *file = argv[2];
 	char edit[64];
 	char gcc[64];
 	char cc[64];
@@ -24,32 +25,26 @@ int main(int argc, char *argv[])
 	/*
 	 * command line arguments
 	 * -g compile with gcc (instead of cc)
-	 * -m compile with make
-	 * -i make install (obviously)
-	 *  you can also use -mi to make and
-	 *  install but you'll need root access.
+	 * -m compile with make & install
 	 *  default: Error out
 	 */
-	while((arg = getopt(argc, argv, "gmi")) != -1)
+	while((arg = getopt(argc, argv, "gm")) != -1)
 	{
 		switch(arg)
 		{
 			case 'g' :
 				system(edit);
 				system(gcc);
-				return 0;
+				break;
 			case 'm' :
 				system(edit);
-				system("make");
-				return 0;
-			case 'i' :
-				system(edit);
-				system("make install");
-				return 0;
+				system("make && make install");
+				break;
 			default :
 				printf("Invalid arguments\n");
-				return 0;
+				break;
 		}
+		return 0;
 	}
 	
 	system(edit);
