@@ -38,6 +38,7 @@ int main(int argc, char *argv[])
 				break;
 			case 'm' :
 				system(edit);
+				printf("Make sure you're running as root!\n");
 				system("make && make install");
 				break;
 			default :
