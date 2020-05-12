@@ -19,11 +19,4 @@ vc "file.c"
 
 -m will compile with a makefile and install "make && make install" (be sure to run as root!)
 
-# Known bugs
-The program will not work if you add arguments after you specify the filename e.g
-vc "filename" -m
-
-You HAVE to make sure you type it like this: vc -m "filename"
-
-I had to make it like this because originally it would skip the arguments as if
-you didn't put any. I'm fairly new to C so I wasn't able to figure out why
+Make sure you specify the filename first, then the command options after!
