@@ -3,14 +3,13 @@
 #include <stdlib.h>
 #include <unistd.h>
 
-
 int main(int argc, char *argv[])
 {
 	/*
 	 * Needed variables and integers
 	 */
 	int arg;
-	char *file = argv[2];
+	char *file = argv[1];
 	char edit[64];
 	char gcc[64];
 	char cc[64];
@@ -48,6 +47,10 @@ int main(int argc, char *argv[])
 		return 0;
 	}
 	
+	/*
+	 * Default behavior if
+	 * no arguments are specified
+	 */
 	system(edit);
 	system(cc);
 	return 0;
